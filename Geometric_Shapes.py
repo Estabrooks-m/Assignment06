@@ -19,12 +19,14 @@ class circle(shape):
     def area(self, height, width):
         r= height/2
         area= 3.1415 * (r**2)
-        return(area)
+        A= round(area, 3)
+        return(A)
     #finds perimeter of circle 
     def perimeter(self, height, width):
         r= height/2
         per= 2* 3.1415* r
-        return(per)
+        P= round (per, 3)
+        return(P)
     
 class rectangle(shape):
     #Finds area of rectangle
@@ -56,8 +58,6 @@ def main():
         shape= rectangle()
         print("Area: ", shape.area(height, width))
         print("Perimeter: ", shape.perimeter(height, width))
-    
-
 
 
 main()
