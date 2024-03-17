@@ -15,12 +15,23 @@ class shape:
     
 #child classes
 class circle(shape):
-    None
+    #Finds area of circle
+    def area(self, height, width):
+        r= height/2
+        area= 3.1415 * (r**2)
+        return(area)
+    #finds perimeter of circle 
+    def perimeter(self, height, width):
+        r= height/2
+        per= 2* 3.1415* r
+        return(per)
     
 class rectangle(shape):
+    #Finds area of rectangle
     def area(self, height, width):
         area= height*width
         return(area)
+    #finds perimeter of rectangle 
     def perimeter(self, height, width):
         per= (2*height)+(2*width)
         return(per)
@@ -30,17 +41,25 @@ class triangle(shape):
     
     
 def main(): 
-    width= 3
-    height= 4
-    shape= rectangle()
-    print(shape.area(height, width))
+    width= int(input("Width: "))
+    height= int(input("Height: "))
+    
+    calc= int(input("What shape do you want to calculate: Circle (1), REctangel (2) or triangle(3)? "))
     
     
+    if (calc == 1):   
+        shape= circle()
+        print("Area: ", shape.area(height, width))
+        print("Perimeter: ", shape.perimeter(height, width))
+        
+    elif (calc == 2):   
+        shape= rectangle()
+        print("Area: ", shape.area(height, width))
+        print("Perimeter: ", shape.perimeter(height, width))
     
-    
-    
-    
-    
+
+
+
 main()
 
 
