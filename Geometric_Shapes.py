@@ -59,7 +59,6 @@ def main():
         print("Area: ", shape.area(height, width))
         print("Perimeter: ", shape.perimeter(height, width))
 
-
 main()
 
 
