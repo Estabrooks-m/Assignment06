@@ -71,7 +71,8 @@ def main():
     
     animal= tuna()
     print(animal.eat())
-    print("")   
+    print("") 
+    
 main()
         
 
