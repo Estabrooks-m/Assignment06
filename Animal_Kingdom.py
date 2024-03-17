@@ -16,15 +16,18 @@ class animal:
 #Subclass of animal
 class mammal(animal):
     def __init__(self):
-        None
+        #initialize eat method from animals
+        print(super().eat())
 
 class bird(animal):
     def __init__(self):
-        None
+        #initialize eat method from animals
+        print(super().eat())
 
 class fish(animal):
     def __init__(self):
-        None
+        #initialize eat method from animals
+        print(super().eat())
 
 #Subclass of mammals        
 class dog(mammal):
@@ -52,13 +55,7 @@ class tuna(fish):
     def eat(self):
         eat=("The tuna is eating")
         return(eat)
-        
-        
-    
-
-
-    
-    
+      
 def main():
     #
     animal= dog()
