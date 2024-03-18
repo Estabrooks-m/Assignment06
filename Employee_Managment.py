@@ -9,16 +9,38 @@ class employee:
     def __init__(self, name, position):
         self.name= name
         self.position= position
-        
-        
-def main():
+    def calculate_salary(self):
+        sal= ("Employee salery")
+        return(sal)
+    
+class HourlyEmployee(employee):
+    def calculate_salary(self):
+        pay= float(input("Hourly pay: "))
+        hours= float(input("Hours worked: "))     
+        salery= pay*hours
+        s= round (salery, 2)
+        return(s)
+   
+class SalariedEmployee(employee):
+    def calculate_salary(self):
+        pay= float(input("Pay per year: "))
+        years= float(input("Years worked: "))    
+        tax= .22
+        salery= (pay*tax)*years
+        s= round (salery, 2)
+        return(s)
+    
+    
+    
+class CommissionEmployee(employee):
     None
     
+
+
+def main():
+    name= "emma"
+    positon= "waiter"
+    employee= SalariedEmployee(name, positon)
+    print(employee.calculate_salary())
     
 main()
-
-'''Develop an employee management system where Employee is a base class with attributes like name and
-position, and methods such as calculate_salary(). Derive different classes such as HourlyEmployee,
-SalariedEmployee, and CommissionEmployee that each have different implementations of the
-calculate_salary() method. Implement a function that processes a list of employees and calculates their
-salary using polymorphism, without needing to check the type of each employee.'''
