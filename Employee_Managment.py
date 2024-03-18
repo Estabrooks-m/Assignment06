@@ -44,14 +44,14 @@ class CommissionEmployee(employee):
 
 def main():
     name= str(input("Name: "))
-    position= str(input("Position"))
+    position= str(input("Position: "))
     styp= str(input("How are you payed: Hourly (H), Salaried (S), Commision (C)? "))
     
     if (styp== "H"):
-        employee= SalariedEmployee(name, position)
+        employee= HourlyEmployee(name, position)
         print("$", employee.calculate_salary())
     elif (styp== "S"):
-        employee= HourlyEmployee(name, position)
+        employee= SalariedEmployee(name, position)
         print("$", employee.calculate_salary())
     elif (styp== "C"):
         employee= CommissionEmployee(name, position)
