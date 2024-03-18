@@ -30,17 +30,21 @@ class SalariedEmployee(employee):
         s= round (salery, 2)
         return(s)
     
-    
-    
 class CommissionEmployee(employee):
-    None
-    
+    def calculate_salary(self):
+        company= float(input("How much did you make in sales: "))
+        percent= float(input("What percent do you get to take home: "))  
+        p= percent/100
+        base= float(input("What is your base pay (if none enter 0)?: "))
+        salery= (company*p) + base
+        s= round (salery, 2)
+        return(s)
 
 
 def main():
     name= "emma"
     positon= "waiter"
-    employee= SalariedEmployee(name, positon)
+    employee= CommissionEmployee(name, positon)
     print(employee.calculate_salary())
     
 main()
