@@ -10,7 +10,7 @@ class employee:
         self.name= name
         self.position= position
     def calculate_salary(self):
-        sal= ("Employee salery")
+        sal= f"{self.name}, {self.position}: "
         return(sal)
     
 class HourlyEmployee(employee):
@@ -38,13 +38,14 @@ class CommissionEmployee(employee):
         base= float(input("What is your base pay (if none enter 0)?: "))
         salery= (company*p) + base
         s= round (salery, 2)
+        print(super().calculate_salary())
         return(s)
 
 
 def main():
     name= "emma"
-    positon= "waiter"
-    employee= CommissionEmployee(name, positon)
-    print(employee.calculate_salary())
+    position= "waiter"
+    employee= CommissionEmployee(name, position)
+    print("$", employee.calculate_salary())
     
 main()
