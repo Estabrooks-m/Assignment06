@@ -39,8 +39,15 @@ class rectangle(shape):
         return(per)
     
 class triangle(shape):
-    None
-    
+    #Finds area of triangle
+    def area(self, height, width):
+        area= (1/2) * height*width
+        return(area)
+    #finds perimeter of triangle 
+    def perimeter(self, height, width):
+        hyp= int(input("Enter third side length "))
+        per= height + width + hyp
+        return(per) 
     
 def main(): 
     width= int(input("Width: "))
@@ -58,6 +65,30 @@ def main():
         shape= rectangle()
         print("Area: ", shape.area(height, width))
         print("Perimeter: ", shape.perimeter(height, width))
+        
+    elif (calc == 3):   
+        shape= triangle()
+        print("Area: ", shape.area(height, width))
+        print("Perimeter: ", shape.perimeter(height, width))
+        
+    else:
+        while (calc != 1 and calc != 2 and calc !=3):
+            calc= int(input("Error try again "))     
+        
+        if (calc == 1):   
+            shape= circle()
+            print("Area: ", shape.area(height, width))
+            print("Perimeter: ", shape.perimeter(height, width))
+            
+        elif (calc == 2):   
+            shape= rectangle()
+            print("Area: ", shape.area(height, width))
+            print("Perimeter: ", shape.perimeter(height, width))
+            
+        elif (calc == 3):   
+            shape= triangle()
+            print("Area: ", shape.area(height, width))
+            print("Perimeter: ", shape.perimeter(height, width))
 
 main()
 
