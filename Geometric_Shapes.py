@@ -45,15 +45,16 @@ class triangle(shape):
         return(area)
     #finds perimeter of triangle 
     def perimeter(self, height, width):
-        hyp= int(input("Enter third side length "))
+        hyp= (height**2 + width**2)**.5
         per= height + width + hyp
-        return(per) 
+        p= round(per,3)
+        return(p) 
     
 def main(): 
     width= int(input("Width: "))
     height= int(input("Height: "))
     
-    calc= int(input("What shape do you want to calculate: Circle (1), REctangel (2) or triangle(3)? "))
+    calc= int(input("What shape do you want to calculate: Circle (1), Rectangel (2) or triangle(3)? "))
     
     
     if (calc == 1):   
