@@ -57,7 +57,7 @@ class tuna(fish):
         return(eat)
       
 def main():
-    #
+    #call eat method for specific animal using polymorphism
     animal= dog()
     print(animal.eat())
     print("")
